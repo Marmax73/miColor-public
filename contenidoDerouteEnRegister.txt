@@ -1,0 +1,80 @@
+export const runtime = "nodejs";
+
+import { NextResponse } from "next/server";
+import { prisma } from "@/lib/prisma";
+import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
+
+export async function POST(req) {
+  try {
+    const { email, password } = await req.json();
+
+    if (!email || !password) {
+      return NextResponse.json(
+        { error: "Email y contraseña son obligatorios" },
+        { status: 400 }
+      );
+    }
+
+    const user = await prisma.user.findUnique({
+      where: { email },
+    });
+
+    if (!user) {
+      return NextResponse.json(
+        { error: "Usuario no encontrado" },
+        { status: 404 }
+      );
+    }
+
+    const passwordCorrecta = await bcrypt.compare(
+      password,
+      user.password
+    );
+
+    if (!passwordCorrecta) {
+      return NextResponse.json(
+        { error: "Contraseña incorrecta" },
+        { status: 401 }
+      );
+    }
+
+    if (!process.env.JWT_SECRET) {
+      throw new Error("JWT_SECRET no está definido");
+    }
+
+    const token = jwt.sign(
+      {
+        id: user.id,
+        email: user.email,
+        perfil: user.perfil,
+      },
+      process.env.JWT_SECRET,
+      { expiresIn: "1h" }
+    );
+
+    const response = NextResponse.json({
+      success: true,
+      redirect:
+        user.perfil === "tienda"
+          ? "/bienvenidaTienda"
+          : "/bienvenidaCliente",
+    });
+
+    response.cookies.set("token", token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "strict",
+      path: "/",
+    });
+
+    return response;
+
+  } catch (error) {
+    console.error("🔥 ERROR:", error);
+    return NextResponse.json(
+      { error: error.message },
+      { status: 500 }
+    );
+  }
+}

@@ -1,0 +1,168 @@
+🎨 Concepto creativo de la paleta
+
+“Luxury Night Glow”
+Inspirada en:
+
+la noche sofisticada
+
+la piel iluminada
+
+el brillo metálico del oro
+
+contrastes suaves que atraen sin agredir
+
+Ideal para:
+
+portada con mujer protagonista
+
+marcas de belleza, moda, estética, fotografía, lifestyle premium
+
+🎯 Paleta principal (base)
+1️⃣ Negro-azulado profundo (base dominante)
+Midnight Navy
+#0B0F1A
+
+
+Sensación: misterio, elegancia, lujo nocturno
+
+Uso: fondos principales, hero, overlays
+
+Mejor que negro puro → más sofisticado y moderno
+
+2️⃣ Oro cálido elegante (acento premium)
+Soft Gold
+#C9A24D
+
+
+Sensación: glamour, valor, atracción visual
+
+Uso: títulos clave, líneas finas, botones primarios, detalles
+
+No es amarillo → es dorado refinado
+
+3️⃣ Tiza suave (contraste limpio)
+Chalk Ivory
+#F4F1EC
+
+
+Sensación: piel, luz, pureza
+
+Uso: textos principales, fondos claros secundarios
+
+Mucho más elegante que blanco puro
+
+🎨 Colores de soporte (equilibrio & belleza)
+4️⃣ Nude rosado elegante (piel / feminidad)
+Blush Nude
+#D6B7A9
+
+
+Ideal para acompañar imágenes de mujer
+
+Uso: fondos suaves, cards, highlights secundarios
+
+5️⃣ Gris humo frío (texto secundario)
+Smoked Gray
+#9A9A9F
+
+
+Uso: subtítulos, metadata, descripciones
+
+Mantiene sofisticación sin robar protagonismo
+
+6️⃣ Oro oscuro (hover / profundidad)
+Antique Gold
+#9F7C32
+
+
+Uso: hover, estados activos, sombras doradas
+
+🧩 Paleta completa resumida
+Rol	Color	Hex
+Fondo principal	Midnight Navy	#0B0F1A
+Acento premium	Soft Gold	#C9A24D
+Texto principal	Chalk Ivory	#F4F1EC
+Piel / feminidad	Blush Nude	#D6B7A9
+Texto secundario	Smoked Gray	#9A9A9F
+Oro profundo	Antique Gold	#9F7C32
+🖼️ Casos de uso
+1️⃣ Portada (Hero con mujer)
+
+Fondo
+
+Degradado sutil:
+
+linear-gradient(180deg, #0B0F1A 0%, #12182A 100%)
+
+
+Imagen
+
+Mujer con iluminación lateral
+
+Piel cálida, fondo oscuro
+
+Overlay:
+
+background: rgba(11, 15, 26, 0.45);
+
+
+Texto
+
+    Título: #F4F1EC
+
+    Palabra clave (1 sola): #C9A24D
+
+    👉 Ejemplo:
+
+    BEAUTY (oro)
+    starts in the dark (tiza)
+
+    2️⃣ Botón principal (CTA)
+    background: #C9A24D;
+    color: #0B0F1A;
+    border-radius: 9999px;
+
+
+    Hover:
+
+    background: #9F7C32;
+
+
+    Sensación: joya táctil
+
+    3️⃣ Cards / secciones internas
+    background: #12182A;
+    border: 1px solid rgba(201,162,77,0.25);
+
+
+    Título: #F4F1EC
+    Texto: #9A9A9F
+
+4️⃣ Detalles visuales (lujo sutil)
+
+Líneas finas en oro
+
+Íconos outline dorados
+
+Sombras suaves cálidas:
+
+box-shadow: 0 20px 40px rgba(201,162,77,0.15);
+
+🧠 Reglas clave para mantener glamour
+
+✔ Usar oro solo como acento
+✔ Mucho espacio oscuro (respira lujo)
+✔ Tipografías serif o sans elegantes
+✔ Pocos colores, bien jerarquizados
+
+🎯 Resultado final
+
+Esta paleta:
+
+transmite atracción sin vulgaridad
+
+realza imágenes femeninas
+
+se siente premium, nocturna y sofisticada
+
+funciona perfecto en web moderna (Next.js / Tailwind)

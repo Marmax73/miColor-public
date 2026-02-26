@@ -1,0 +1,1 @@
+Este es el enlace de login para renderizar el modal de acceso a la app desde páginas externas a la barra de navegación.

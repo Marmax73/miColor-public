@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --linear-gradient: linear-gradient(180deg, #0B0F1A 0%, #12182A 100%);
+
+  /* Tu paleta */
+  --color-bg: #FAF9F6;           /* fondo claro */
+  --color-bg-alt: #E5E5E5;       /* fondo secundario */
+  --color-text: #2C2C2C;         /* texto principal */
+  --color-text-muted: #666666;   /* texto secundario */
+
+  /* Paleta femenina */
+  --color-accent-rose: #DB5F7A;  /* rosa empolvado */
+  --color-accent-lilac: #C7B8EA; /* lila suave */
+
+  /* Detalles dorados */
+  --color-gold: #e9d1a9;
+  --color-gold-strong: #B8860B;
+}
+
+@theme inline {
+  --color-background: var(--color-bg);
+  --color-foreground: var(--color-text);
+  --color-bg-alt: var(--color-bg-alt);
+  --color-text-muted: var(--color-text-muted);
+
+  --color-accent-rose: var(--color-accent-rose);
+  --color-accent-lilac: var(--color-accent-lilac);
+
+  --color-gold: var(--color-gold);
+  --color-gold-strong: var(--color-gold-strong);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--color-gold);
+  color: var(--color-text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* .....................................*/
+
+
+/* Estilos para transformar la "o" de miColor, en un corazón */
+.mi-color { font-size: 24px; font-weight: 600; }
+
+.heart {
+  /* ocultamos la "o" real visualmente y ponemos el corazón con ::after */
+  color: transparent;
+  position: relative;
+  display: inline-block;
+  width: 1ch; /* ancho similar a una letra */
+  text-align: center;
+}
+.heart::after {
+  content: "❤";
+  color: var(--color-accent-rose); /* rojo (Tailwind text-red-500 es #ef4444) */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  font-size: 0.8em;
+  line-height: 1;
+  
+}
+.sr-only {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden; clip: rect(1px,1px,1px,1px);
+  white-space: nowrap; border: 0; padding: 0; margin: -2px;
+  ;
+}
+
+/* Estilos para el <hr> en RegistroTienda/page.js y RegistroCliente */
+hr {
+      width: 30vw;
+      color: rgb(165, 164, 164);
+      margin: auto;
+      display: flex;
+    }

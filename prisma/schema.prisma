@@ -1,0 +1,42 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRES_PRISMA_URL")
+}
+
+model User {
+  id                 Int          @id @default(autoincrement())
+  perfil             Perfil       @default(CLIENTE)
+  nombre             String
+  apellido           String
+  localidad          String
+  direccionComercial String?
+  cuit               String?
+  creadoEn           DateTime     @default(now())
+  email              String       @unique
+  password           String
+  telefono           String
+  multimedia         Multimedia[]
+}
+
+model Multimedia {
+  id       Int       @id @default(autoincrement())
+  tipo     TipoMedia
+  url      String
+  userId   Int
+  creadoEn DateTime  @default(now())
+  user     User      @relation(fields: [userId], references: [id])
+}
+
+enum Perfil {
+  CLIENTE
+  TIENDA
+}
+
+enum TipoMedia {
+  FOTO
+  VIDEO
+}
