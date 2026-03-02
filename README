@@ -1,0 +1,60 @@
+ * MI COLOR APP *
+
+Aplicación web desarrollada con Next.js que permite registro de clientes y tiendas, con validaciones personalizadas y arquitectura basada en componentes reutilizables.
+
+DEMO EN PRODUCCIÓN:
+
+La aplicación se encuentra desplegada en Vercel:
+
+🔗 https://mi-color.vercel.app/
+
+ Nota: El entorno público es una versión demostrativa.
+
+
+SOBRE EL CÓDIGO PÚBLICO:
+
+El repositorio contiene una versión demostrativa del proyecto con fines de evaluación técnica.
+
+La versión en producción incluye:
+- Configuración privada de entorno
+- Variables sensibles protegidas
+- Ajustes adicionales de seguridad y base de datos
+
+Por razones de seguridad, ciertas configuraciones no están incluidas en este repositorio.
+
+STACK:
+
+- Next.js
+- React
+- TailwindCSS
+- PostgreSQL (Neon)
+- Deploy en Vercel
+- Testing con Jest y React Testing Library
+
+ARQUITECTURA:
+
+- App Router
+- Componentes desacoplados
+- Validaciones separadas en utilidades
+- API Routes para persistencia
+- Manejo de estado con hooks
+
+
+INSTALACIÓN LOCAL: 
+
+git clone https://github.com/tuusuario/miColor
+cd miColor
+npm install
+npm run dev
+
+Crear un archivo .env.local con las siguientes variables:
+
+DATABASE_URL=...
+
+TESTING: 
+
+El proyecto incluye tests unitarios para componentes clave.
+
+Ejecutar:
+
+npm test
