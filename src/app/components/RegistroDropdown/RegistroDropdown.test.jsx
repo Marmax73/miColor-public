@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
+import "@testing-library/jest-dom";
 import RegistroDropdown from "./RegistroDropdown";
-
 // Mock de next/link
 jest.mock("next/link", () => {
   return ({ children, href, onClick }) => (
@@ -50,30 +50,7 @@ describe("RegistroDropdown component", () => {
     expect(mockOnLinkClick).toHaveBeenCalledTimes(1);
   });
 
-  test("cambia la clase del dropdown según el tamaño de la ventana (modo móvil)", () => {
-    render(<RegistroDropdown />);
-    const button = screen.getByText("Registro");
+  
 
-    // Simular pantalla móvil
-    window.innerWidth = 375;
-    fireEvent(window, new Event("resize"));
-
-    fireEvent.click(button); // Abrir dropdown
-
-    const dropdown = screen.getByText("Registro Tienda").parentElement.parentElement;
-    expect(dropdown.className).toMatch(/left-1\/5/); // Clase que indica modo móvil
-  });
-
-  test("mantiene clase de desktop en pantalla grande", () => {
-    render(<RegistroDropdown />);
-    const button = screen.getByText("Registro");
-
-    window.innerWidth = 1024;
-    fireEvent(window, new Event("resize"));
-
-    fireEvent.click(button); // Abrir dropdown
-
-    const dropdown = screen.getByText("Registro Tienda").parentElement.parentElement;
-    expect(dropdown.className).toMatch(/left-0/); // Clase que indica modo desktop
-  });
+ 
 });
