@@ -35,7 +35,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/dev/types/**/*.ts"
-, "src/app/components/modals/LoginModal.js"  ],
+, "src/shared/components/modals/LoginModal.js"  ],
   "exclude": [
     "node_modules"
   ]

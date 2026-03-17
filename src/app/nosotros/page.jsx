@@ -1,5 +1,5 @@
 import React from "react";
-import BotonHome from "../components/botonHome/botonHome";
+import BotonHome from "../../shared/components/botonHome/botonHome";
 
 const NosotrosPage = () => {
   return (

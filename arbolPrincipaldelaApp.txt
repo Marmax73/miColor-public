@@ -1,0 +1,46 @@
+src
+│
+├ app
+│   ├ api
+│   │   └ auth
+│   │
+│   ├ bienvenidaCliente
+│   ├ bienvenidaTienda
+│   ├ comenzar
+│   ├ login
+│   ├ nosotros
+│   ├ RegistroCliente
+│   └ RegistroTienda
+│
+├ features
+│
+│   ├ auth
+│   │   ├ components
+│   │   ├ context
+│   │   ├ hooks
+│   │   ├ reducers
+│   │   │   └ authReducer.ts
+│   │   ├ services
+│   │   │   └ authService.ts
+│   │   └ types
+│   │
+│   └ perfil
+│       ├ components
+│       ├ context
+│       ├ hooks
+│       ├ reducers
+│       │   └ perfilReducer.ts
+│       ├ services
+│       └ types
+│
+├ shared
+│   └ components
+│       ├ botonHome
+│       ├ camara
+│       ├ modals
+│       ├ navbar
+│       ├ RegistroDropdown
+│       └ TextoGenerico
+│
+├ lib
+└ utils

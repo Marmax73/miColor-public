@@ -1,7 +1,7 @@
   
 "use client"
 import Link from "next/link";
-import BotonHome from "../components/botonHome/botonHome";
+import BotonHome from "../../shared/components/botonHome/botonHome";
 
 
 
